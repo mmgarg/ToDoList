@@ -1,0 +1,326 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url("bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    overflow: hidden;
+}
+
+.main {
+    width: 80vw;
+    height: 100vh;
+    background-color: rgba(62, 62, 62, 0.673);
+}
+
+.side {
+    width: 20vw;
+    height: 100vh;
+    background-color: rgba(56, 56, 56, 0.503);
+}
+
+.clock {
+    height: 15%;
+    padding: 24px;
+    margin: 0;
+    background-color: rgb(56, 56, 56);
+    display: flex;
+    justify-content: space-around;
+}
+
+.analog {
+    height: 21.5%;
+    padding: 0;
+}
+
+.editC {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 2px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.h1, .h2, .m1, .m2 {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.h1 div, .h2 div, .m1 div, .m2 div {
+    display: flex;
+}
+
+.hh1, .hh2, .hh3 {
+    background-color: rgb(57, 220, 12);
+    border-radius: 8px;
+    margin: 1px;
+    width: 40px;
+    height: 4px;
+    opacity: 0.05;
+}
+
+.hv1, .hv3 {
+    background-color: rgb(57, 220, 12);
+    border-radius: 8px;
+    margin: 1px;
+    height: 40px;
+    width: 4px;
+    opacity: 0.05;
+}
+
+.hv2, .hv4 {
+    background-color: rgb(57, 220, 12);
+    border-radius: 8px;
+    margin: 1px;
+    margin-left: 30px;
+    height: 40px;
+    width: 4px;
+    opacity: 0.05;
+}
+
+.bet {
+    padding-top: 10px;
+}
+.bet div {
+    margin-top: 25px;
+    height: 5px;
+    opacity: 1;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    background-color: rgba(64, 130, 16, 0.435);
+    color: white;
+    height: 78.5%;
+    margin: 0;
+}
+
+.todo h2 {
+    color: rgb(225, 221, 221);
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 16px;
+    background-color: rgb(32, 149, 14);
+}
+
+.todo div {
+    height: 90%;
+}
+
+.todo ul {
+    overflow: auto;
+    height: 80%;
+    text-align: left;
+    padding: 0;
+}
+
+.add {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(32, 149, 14);;
+    color: white;
+    padding: 12px;
+    border: white 4px solid;
+    cursor: pointer;
+}
+
+.item {
+    list-style: none;
+    background-color: rgba(128, 128, 128, 0.884);
+    padding: 8px;
+    margin: 4px;
+}
+
+.item div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checked {
+    text-decoration: line-through;
+    opacity: 0.4;
+}
+
+.form {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(59, 59, 59, 0.918);
+    color: white;
+}
+
+.form label, .form input, .form div, .form select {
+    width: 50%;
+    margin-bottom: 8px;
+}
+
+.form input, .form select {
+    padding: 8px;
+    font-size: 16px;
+    width: 48%;
+    margin-bottom: 20px;
+    
+}
+
+.form div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form div button {
+    width: 49%;
+}
+
+.close {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(149, 18, 14);;
+    color: white;
+    padding: 12px;
+    border: white 4px solid;
+    cursor: pointer;
+}
+
+.show {
+    display: flex;
+}
+
+.eform input {
+    margin-right: 8px;
+}
+
+.main {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+table {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.735);
+}
+
+th {
+    background-color: yellowgreen;
+    color: white;
+}
+
+tr {
+    color: black;
+    height: 70px;
+    background-color: white;
+}
+
+#month {
+    padding: 4px;
+}
+
+.change {
+    background-color: yellowgreen;
+    color: white;
+    border: 2px solid white;
+    padding: 8px;
+    font-weight: bold;
+}
+
+.selected {
+    background-color: rgb(173, 230, 164);
+}
+
+li button {
+    margin-top: 8px;
+    padding: 4px;
+    cursor: pointer;
+    background-color: rgb(32, 149, 14);
+    color: white;
+    border: 1px solid black;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.login {
+    position: absolute;
+    top: 0;
+    background: rgb(34,193,195);
+    background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login input, .login button {
+    width: 50%;
+    padding: 16px;
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+.login button {
+    background-color: tomato;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        flex-direction: column-reverse;
+        height: 100%;
+    }
+
+    .main {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .scroll {
+        overflow: scroll;
+    }
+    
+    .side {
+        width: 100%;
+        margin-top: 0;
+        height: 100%;
+    }
+
+    .clock {
+        height: 100%;
+    }
+
+    .todo {
+        height: 100%;
+    }
+
+    .form {
+        height: 100%;
+        width: 100%; 
+    }
+
+    .login input, .login button {
+        width: 90%;
+    }
+  }

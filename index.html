@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider Task 2</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+    <div class="login">
+        <input placeholder="Username" type="text" id="username" />
+        <input placeholder="Password" type="password" id="password" />
+        <button onclick="signin()">Login</button>
+    </div>
+    <div class="main">
+        <div>
+            <h1 class="calhead"></h1>
+            <input id="month" type="month">
+            <button class="change" onclick="setCalendar()">Change</button>
+            <br></br>
+        </div>
+        <br></br>
+        <table>
+            <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+        </table>
+    </div>
+    <div class="side">
+        <div class="clock">
+            <div class="h1">
+                <div class="hh1"></div>
+                <div>
+                    <div class="hv1"></div>
+                    <div class="hv2"></div>
+                </div>
+                <div class="hh2"></div>
+                <div>
+                    <div class="hv3"></div>
+                    <div class="hv4"></div>
+                </div>
+                <div class="hh3"></div>
+            </div>
+            <div class="h2">
+                <div class="hh1"></div>
+                <div>
+                    <div class="hv1"></div>
+                    <div class="hv2"></div>
+                </div>
+                <div class="hh2"></div>
+                <div>
+                    <div class="hv3"></div>
+                    <div class="hv4"></div>
+                </div>
+                <div class="hh3"></div>
+            </div>
+            <div class="bet">
+                <div class="hv1"></div>
+                <div class="hv1"></div>
+            </div>
+            <div class="m1">
+                <div class="hh1"></div>
+                <div>
+                    <div class="hv1"></div>
+                    <div class="hv2"></div>
+                </div>
+                <div class="hh2"></div>
+                <div>
+                    <div class="hv3"></div>
+                    <div class="hv4"></div>
+                </div>
+                <div class="hh3"></div>
+            </div>
+            <div class="m2">
+                <div class="hh1"></div>
+                <div>
+                    <div class="hv1"></div>
+                    <div class="hv2"></div>
+                </div>
+                <div class="hh2"></div>
+                <div>
+                    <div class="hv3"></div>
+                    <div class="hv4"></div>
+                </div>
+                <div class="hh3"></div>
+            </div>
+        </div>
+        <div class="clock hidden analog">
+            <canvas id="canvas" style="background-color:#333"></canvas>
+        </div>
+        <button onclick="showEditForm()" class="editC">&#9998</button>
+        <div class="todo">
+            <div>
+                <h2>TODO List for <br /> <span class="todohead"></span></h2>
+                <ul class="list">
+                </ul>
+            </div>
+            <button class="add" onclick="showForm()">Add</button>
+        </div>
+    </div>
+    <div class="form">
+        <label for="task">Task</label>
+        <input id="task" type="text" placeholder="Enter Task here" required />
+        <label for="date">Date</label>
+        <input id="date" type="date" required />
+        <label for="time">Deadline</label>
+        <input id="time" type="time" required />
+        <div>
+            <button class="close" onclick="hideForm()">Close</button>
+            <button class="add" onclick="addItem()">Add Task</button>
+        </div>
+    </div>
+    <div class="form eform">
+        <label for="type">Clock Type:</label>
+        <select id="type" name="type">
+            <option value="digital">Digital</option>
+            <option value="analog">Analog</option>
+        </select>
+        <div>
+            <label for="bgclr">Background Color:</label>
+            <input id="bgclr" type="color" value="#000000" required />
+            <label for="clr">Color:</label>
+            <input id="clr" type="color" value="#00ff00" required />
+            <label for="nclr">NColor:</label>
+            <input id="nclr" type="color" value="#ffffff" required />
+        </div>
+        <div>
+            <label for="hour">Hour Length:</label>
+            <input id="hour" type="number" min="1" max="9" value="5" required />
+            <label for="minute">Minute Length:</label>
+            <input id="minute" type="number" min="1" max="9" value="7" required />
+            <label for="second">Second Length:</label>
+            <input id="second" type="number" min="1" max="9" value="9" required />
+        </div>
+        <label for="sound">Audio Level:</label>
+        <input id="sound" type="number" min="0" max="10" value="5" required />
+        <div>
+            <button class="close" onclick="hideEForm()">Close</button>
+            <button class="add" onclick="changeClock()">Change Clock</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
